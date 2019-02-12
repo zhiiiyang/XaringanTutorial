@@ -33,6 +33,10 @@ class: center, middle
 Do you use `ctrl + K` to render your Markdown file?
   - So, Are you tired from scrolling down to the page you were editing? 
 
+  &lt;img src="https://memegenerator.net/img/instances/61114187.jpg" width='50%' align="middle"/&gt;
+--
+
+
 ### Turn on the `Moon Reader` from either the pacakge or the addin
 
 ### From now on, the slides will auto-reloaded after you hit `ctrl + S`
@@ -48,6 +52,7 @@ Press `h` or `?`
 `b` -&gt; blackout
 
 `f` -&gt; fullscreen mode
+
 --
 
 `c` -&gt; clone slideshow
@@ -97,7 +102,92 @@ class: center, middle
 
 
 ---
+# Incremental reveals
 
+.left-column[
+
+```
+# Hi
+
+Did you know
+
+--
+you can
+
+--
+do this?
+
+```
+]
+
+
+#Hi
+
+--
+
+Did you know
+
+--
+
+you can
+
+--
+
+do this?
+
+---
+# Two-columns
+.top-column[
+```r
+.pull-left[
+![](imgs/ocrug_logo.png)
+]
+.pull-right[
+![](https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg)
+]
+```
+]
+
+--
+
+.bottom-column[
+.left-column[
+&lt;img src="imgs/ocrug_logo.png" align="right"&gt;
+]
+.right-column[
+&lt;img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" align="middle"&gt;  
+]
+]
+
+
+---
+#Just add a image
+```r
+![](/imgs/ocrug.jpeg)
+```
+![](/imgs/ocrug.jpeg)
+
+---
+#Resize it
+`Should it be something like?` 😢
+```r
+![](/imgs/ocrug.jpeg){width=10px}
+```
+
+`Option 2`:
+```r
+&lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
+```
+&lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
+
+
+`Option 2`: out.width = "20%"
+
+```r
+knitr::include_graphics("imgs/ocrug.jpeg")
+```
+
+&lt;img src="imgs/ocrug.jpeg" width="20%" /&gt;
 
 ---
 background-image: url(/imgs/ocrug.jpeg)
@@ -146,34 +236,6 @@ background-image: url(https://secure.meetupstatic.com/photos/event/2/b/9/e/600_4
 background-size: contain
 background-position: bottom
 ```
----
-#Just add a image
-```r
-![](/imgs/ocrug.jpeg)
-```
-![](/imgs/ocrug.jpeg)
-
----
-#Resize it
-`Should it be something like?` 😢
-```r
-![](/imgs/ocrug.jpeg){width=10px}
-```
-
-`Option 2`:
-```r
-&lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
-```
-&lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
-
-
-`Option 2`: out.width = "20%"
-
-```r
-knitr::include_graphics("imgs/ocrug.jpeg")
-```
-
-&lt;img src="imgs/ocrug.jpeg" width="20%" /&gt;
 
 ---
 background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)

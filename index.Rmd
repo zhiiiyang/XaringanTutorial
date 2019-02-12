@@ -30,6 +30,10 @@ class: center, middle
 Do you use `ctrl + K` to render your Markdown file?
   - So, Are you tired from scrolling down to the page you were editing? 
 
+  <img src="https://memegenerator.net/img/instances/61114187.jpg" width='50%' align="middle"/>
+--
+
+
 ### Turn on the `Moon Reader` from either the pacakge or the addin
 
 ### From now on, the slides will auto-reloaded after you hit `ctrl + S`
@@ -45,6 +49,7 @@ Press `h` or `?`
 `b` -> blackout
 
 `f` -> fullscreen mode
+
 --
 
 `c` -> clone slideshow
@@ -80,7 +85,89 @@ class: center, middle
 
 
 ---
+# Incremental reveals
 
+.left-column[
+
+```
+# Hi
+
+Did you know
+
+--
+you can
+
+--
+do this?
+
+```
+]
+
+
+#Hi
+
+--
+
+Did you know
+
+--
+
+you can
+
+--
+
+do this?
+
+---
+# Two-columns
+.top-column[
+```r
+.pull-left[
+![](imgs/ocrug_logo.png)
+]
+.pull-right[
+![](https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg)
+]
+```
+]
+
+--
+
+.bottom-column[
+.left-column[
+<img src="imgs/ocrug_logo.png" align="right">
+]
+.right-column[
+<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" align="middle">  
+]
+]
+
+
+---
+#Just add a image
+```r
+![](/imgs/ocrug.jpeg)
+```
+![](/imgs/ocrug.jpeg)
+
+---
+#Resize it
+`Should it be something like?` `r emo::ji("cry")`
+```r
+![](/imgs/ocrug.jpeg){width=10px}
+```
+
+`Option 2`:
+```r
+<img src="imgs/ocrug.jpeg" width=20% align="middle" />
+```
+<img src="imgs/ocrug.jpeg" width=20% align="middle" />
+
+
+`Option 2`: out.width = "20%"
+```{r out.width = "20%", eval=TRUE}
+knitr::include_graphics("imgs/ocrug.jpeg")
+```
 
 ---
 background-image: url(/imgs/ocrug.jpeg)
@@ -128,31 +215,6 @@ background-position: bottom
 background-image: url(https://secure.meetupstatic.com/photos/event/2/b/9/e/600_471491166.jpeg)
 background-size: contain
 background-position: bottom
-```
----
-#Just add a image
-```r
-![](/imgs/ocrug.jpeg)
-```
-![](/imgs/ocrug.jpeg)
-
----
-#Resize it
-`Should it be something like?` `r emo::ji("cry")`
-```r
-![](/imgs/ocrug.jpeg){width=10px}
-```
-
-`Option 2`:
-```r
-<img src="imgs/ocrug.jpeg" width=20% align="middle" />
-```
-<img src="imgs/ocrug.jpeg" width=20% align="middle" />
-
-
-`Option 2`: out.width = "20%"
-```{r out.width = "20%", eval=TRUE}
-knitr::include_graphics("imgs/ocrug.jpeg")
 ```
 
 ---
