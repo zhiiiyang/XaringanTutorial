@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to Make Slides in R</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Zhi Yang" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# How to Make Slides in R
+## Using xaringan
+### Zhi Yang
+### 2019/1/9
+
+---
+
+
+
+class: center, middle
+
+# Meet xaringan
+
+&lt;img src="https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png" alt="Sharingan" width="180" /&gt;
+
+
+---
+# Infinite moon reader 👨‍🚀
+Do you use `ctrl + K` to render your Markdown file?
+  - So, Are you tired from scrolling down to the page you were editing? 
+
+### Turn on the `Moon Reader` from either the pacakge or the addin
+
+### From now on, the slides will auto-reloaded after you hit `ctrl + S`
+
+---
+class: center, middle
+
+# Keyboard shortcuts
+Press `h` or `?` 
+
+`m` -&gt; mirror
+
+`b` -&gt; blackout
+
+`f` -&gt; fullscreen mode
+--
+
+`c` -&gt; clone slideshow
+
+`p` -&gt; presenter mode
+
+`t` -&gt; restart timer
+
+---
+# Themes 
+
+- Built-in themes
+
+
+```r
+names(xaringan:::list_css())
+```
+
+```
+##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"   
+##  [4] "default"          "duke-blue"        "hygge-duke"      
+##  [7] "hygge"            "kunoichi"         "lucy-fonts"      
+## [10] "lucy"             "metropolis-fonts" "metropolis"      
+## [13] "middlebury-fonts" "middlebury"       "ninjutsu"        
+## [16] "rladies-fonts"    "rladies"          "robot-fonts"     
+## [19] "robot"            "rutgers-fonts"    "rutgers"         
+## [22] "shinobi"          "tamu-fonts"       "tamu"            
+## [25] "uo-fonts"         "uo"
+```
+
+These go to your YAML
+
+
+```r
+output:
+  xaringan::moon_reader:
+*   css: [default, rladies, rladies-fonts]
+```
+
+---
+class: center, middle
+# Build your own theme
+
+&lt;img src="imgs/dark.jpg" width=80% align="center" /&gt;
+
+&lt;img src="imgs/light.jpg" width=80% align="center" /&gt;
+
+
+---
+
+
+---
+background-image: url(/imgs/ocrug.jpeg)
+background-size: cover
+
+# Full screen  
+
+```r
+background-image: url(/imgs/ocrug.jpeg)
+background-size: cover
+```
+
+---
+background-image: url(/imgs/ocrug.jpeg)
+background-size: contain
+
+# Rescale only
+
+```r
+background-image: url(/imgs/ocrug.jpeg)
+background-size: contain
+```
+
+---
+background-image: url(/imgs/ocrug.jpeg)
+background-size: contain
+background-position: bottom
+
+# Change position
+
+```r
+background-image: url(/imgs/ocrug.jpeg)
+background-size: contain
+background-position: bottom
+```
+
+---
+background-image: url(https://secure.meetupstatic.com/photos/event/2/b/9/e/600_471491166.jpeg)
+background-size: contain
+background-position: bottom
+
+# Use online image
+
+```r
+background-image: url(https://secure.meetupstatic.com/photos/event/2/b/9/e/600_471491166.jpeg)
+background-size: contain
+background-position: bottom
+```
+---
+#Just add a image
+```r
+![](/imgs/ocrug.jpeg)
+```
+![](/imgs/ocrug.jpeg)
+
+---
+#Resize it
+`Should it be something like?` 😢
+```r
+![](/imgs/ocrug.jpeg){width=10px}
+```
+
+`Option 2`:
+```r
+&lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
+```
+&lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
+
+
+`Option 2`: out.width = "20%"
+
+```r
+knitr::include_graphics("imgs/ocrug.jpeg")
+```
+
+&lt;img src="imgs/ocrug.jpeg" width="20%" /&gt;
+
+---
+background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)
+background-position: 0% 100%, 100% 0%
+background-size: 30%, 10%
+#Logos 
+
+
+```r
+---
+*layout: true
+
+background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)
+background-position: 0% 100%, 100% 0%
+background-size: 10%, 10%
+
+---
+```
+
+---
+# Netlify 💻
+.pull-left[
+`Step 1:` Go to netlify.com
+
+&lt;img src="imgs/netlify.jpg" align="middle" /&gt;
+]
+
+.pull-right[
+`Step 2:` Connect with your Github account
+
+&lt;img src="imgs/step2.jpg" align="middle" /&gt;
+
+]
+
+
+---
+# Netlify 💻
+.pull-left[
+
+`Step 3:` Select a repo
+
+&lt;img src="imgs/step3.jpg" align="middle" /&gt;
+]
+--
+.pull-right[
+
+`Step 4:` Select a repo
+
+&lt;img src="imgs/step4.jpg" align="middle" /&gt;
+]
+
+---
+# Netlify 💻
+.pull-top[
+`Step 5:` Deploy a site
+
+&lt;img src="imgs/deploy.jpg" width='60%' align="middle" /&gt;
+
+]
+
+.pull-bottom[
+`Step 6:` Change site name
+
+&lt;img src="imgs/step5.jpg" width='50%' align="middle" /&gt;
+
+]
+
+
+---
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan)
+
+Template created by [Alison Hill](https://twitter.com/apreshill)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

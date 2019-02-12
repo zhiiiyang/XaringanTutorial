@@ -1,0 +1,233 @@
+---
+title: "How to Make Slides in R"
+subtitle: "Using xaringan"
+author: "Zhi Yang"
+date: "2019/1/9"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies", "rladies-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    #chakra: "remark.js" 
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(tidy = FALSE, tidy.opts=list(width.cutoff=40))
+```
+class: center, middle
+
+# Meet xaringan
+
+<img src="https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png" alt="Sharingan" width="180" />
+
+
+---
+# Infinite moon reader `r emo::ji("astronaut")`
+Do you use `ctrl + K` to render your Markdown file?
+  - So, Are you tired from scrolling down to the page you were editing? 
+
+### Turn on the `Moon Reader` from either the pacakge or the addin
+
+### From now on, the slides will auto-reloaded after you hit `ctrl + S`
+
+---
+class: center, middle
+
+# Keyboard shortcuts
+Press `h` or `?` 
+
+`m` -> mirror
+
+`b` -> blackout
+
+`f` -> fullscreen mode
+--
+
+`c` -> clone slideshow
+
+`p` -> presenter mode
+
+`t` -> restart timer
+
+---
+# Themes 
+
+- Built-in themes
+
+```{r eval=TRUE}
+names(xaringan:::list_css())
+```
+
+These go to your YAML
+
+```{r eval = FALSE}
+output:
+  xaringan::moon_reader:
+    css: [default, rladies, rladies-fonts] #<<
+```
+
+---
+class: center, middle
+# Build your own theme
+
+<img src="imgs/dark.jpg" width=80% align="center" />
+
+<img src="imgs/light.jpg" width=80% align="center" />
+
+
+---
+
+
+---
+background-image: url(/imgs/ocrug.jpeg)
+background-size: cover
+
+# Full screen  
+
+```r
+background-image: url(/imgs/ocrug.jpeg)
+background-size: cover
+```
+
+---
+background-image: url(/imgs/ocrug.jpeg)
+background-size: contain
+
+# Rescale only
+
+```r
+background-image: url(/imgs/ocrug.jpeg)
+background-size: contain
+```
+
+---
+background-image: url(/imgs/ocrug.jpeg)
+background-size: contain
+background-position: bottom
+
+# Change position
+
+```r
+background-image: url(/imgs/ocrug.jpeg)
+background-size: contain
+background-position: bottom
+```
+
+---
+background-image: url(https://secure.meetupstatic.com/photos/event/2/b/9/e/600_471491166.jpeg)
+background-size: contain
+background-position: bottom
+
+# Use online image
+
+```r
+background-image: url(https://secure.meetupstatic.com/photos/event/2/b/9/e/600_471491166.jpeg)
+background-size: contain
+background-position: bottom
+```
+---
+#Just add a image
+```r
+![](/imgs/ocrug.jpeg)
+```
+![](/imgs/ocrug.jpeg)
+
+---
+#Resize it
+`Should it be something like?` `r emo::ji("cry")`
+```r
+![](/imgs/ocrug.jpeg){width=10px}
+```
+
+`Option 2`:
+```r
+<img src="imgs/ocrug.jpeg" width=20% align="middle" />
+```
+<img src="imgs/ocrug.jpeg" width=20% align="middle" />
+
+
+`Option 2`: out.width = "20%"
+```{r out.width = "20%", eval=TRUE}
+knitr::include_graphics("imgs/ocrug.jpeg")
+```
+
+---
+background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)
+background-position: 0% 100%, 100% 0%
+background-size: 30%, 10%
+#Logos 
+
+```{r eval = FALSE, tidy=TRUE, tidy.opts=list(width.cutoff=60)}
+---
+layout: true #<<
+
+background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)
+background-position: 0% 100%, 100% 0%
+background-size: 10%, 10%
+
+---
+```
+
+---
+# Netlify `r emo::ji("computer")`
+.pull-left[
+`Step 1:` Go to netlify.com
+
+<img src="imgs/netlify.jpg" align="middle" />
+]
+
+.pull-right[
+`Step 2:` Connect with your Github account
+
+<img src="imgs/step2.jpg" align="middle" />
+
+]
+
+
+---
+# Netlify `r emo::ji("computer")`
+.pull-left[
+
+`Step 3:` Select a repo
+
+<img src="imgs/step3.jpg" align="middle" />
+]
+--
+.pull-right[
+
+`Step 4:` Select a repo
+
+<img src="imgs/step4.jpg" align="middle" />
+]
+
+---
+# Netlify `r emo::ji("computer")`
+.pull-top[
+`Step 5:` Deploy a site
+
+<img src="imgs/deploy.jpg" width='60%' align="middle" />
+
+]
+
+.pull-bottom[
+`Step 6:` Change site name
+
+<img src="imgs/step5.jpg" width='50%' align="middle" />
+
+]
+
+
+---
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan)
+
+Template created by [Alison Hill](https://twitter.com/apreshill)
+
+
