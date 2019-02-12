@@ -5,7 +5,7 @@ author: "Zhi Yang"
 date: "2019/1/9"
 output:
   xaringan::moon_reader:
-    css: ["default", "rladies", "rladies-fonts"]
+    css: ["default", "rladies", "default-fonts"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -223,7 +223,7 @@ background-position: 0% 100%, 100% 0%
 background-size: 30%, 10%
 #Logos 
 
-```{r eval = FALSE, tidy=TRUE, tidy.opts=list(width.cutoff=60)}
+```
 ---
 layout: true #<<
 
