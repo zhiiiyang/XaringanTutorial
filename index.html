@@ -32,7 +32,7 @@ class: center, middle
 
 
 ---
-# Infinite moon reader 👩‍🚀
+# Infinite moon reader 👨‍🚀
 Do you use `ctrl + K` to render your Markdown file?
   - So, Are you tired from scrolling down to the page you were editing? 
 
@@ -69,7 +69,7 @@ Press `h` or `?`
 ---
 # Themes 
 
-- Built-in themes
+- Built-in themes   
 
 
 ```r
@@ -99,14 +99,161 @@ output:
 ```
 
 ---
-class: center, middle
+class: center, middle   
 # Build your own theme
 
 &lt;img src="imgs/dark.jpg" width=80% align="center" /&gt;
 
 &lt;img src="imgs/light.jpg" width=80% align="center" /&gt;
 
+---
+# What if I am something in the middle?
 
+Add `my-style.css` to the YAML to override the current css file 
+    
+
+```r
+output:
+  xaringan::moon_reader:
+*   css: [default, rladies, rladies-fonts, my-style.css]
+```
+
+--
+
+While sitting in my-style.css file, 
+```css
+.red { color: red; }
+.remark-code-line-highlighted { background-color: #e8c9e9; }
+.remark-code, .remark-inline-code { 
+    color: #7c347f;
+    font-weight: 300;
+}
+```
+
+--
+
+I've changed it to .red[red].
+
+---
+#Start with the YAML
+
+.pull-left[
+### Simple version
+
+```
+---
+title: "How to Make Slides in R"
+output:
+  xaringan::moon_reader
+---
+
+```
+]
+
+--
+
+.pull-right[
+### More options
+
+```
+---
+title: "How to Make Slides in R"
+subtitle: "Using xaringan"
+author: "Zhi Yang"
+date: "2019/1/9"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies", 
+          "middlebury-fonts", 
+          "my-style.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    #chakra: "remark.js" 
+---
+
+```
+]
+
+---
+# Make new slides 
+
+Three dashes `---` gives a new slide
+
+```
+---
+title: "How to Make Slides in R"
+output:
+  xaringan::moon_reader
+---
+A slide
+---
+Another slide
+
+
+```
+
+---
+# Align an entire slide
+
+.left-column[
+###Horizontal
+```
+left,
+*center, 
+right
+```
+###Vertical
+```
+top,
+*middle, 
+bottom
+```
+]
+
+.right-column[
+```r
+---
+*class: center, middle 
+
+# Demo slide
+
+This is a center- and middle- aligned slide.
+```
+]
+
+---
+# Align the text 
+
+.left-column[
+###Horizontal
+```
+.left[texts]
+.center[texts] 
+*.right[texts]
+```
+]
+
+.right-column[
+```r
+---
+class: left, top 
+
+# Demo slide
+
+*.center[This is a center- and middle- aligned slide.]
+```
+]
+
+---
+
+class: center, middle 
+
+# Demo slide
+
+.right[This is a center- and middle- aligned slide.]
 
 ---
 # Incremental reveals
@@ -160,7 +307,7 @@ code echo=FALSE, eval=TRUE
 
 --
 
-.bottom-column[
+
 .pull-left[
 
 ```r
@@ -178,6 +325,9 @@ head(namedata_M)
 head(namedata_F) 
 ```
 ]
+
+--
+
 .pull-right[
 
 ```
@@ -201,7 +351,7 @@ head(namedata_F)
 ## 3  1928 F     Orange     7 0.00000586
 ```
 ]
-]
+
 
 ---
 # Two-columns
@@ -221,13 +371,13 @@ code echo=FALSE, eval=TRUE
 
 --
 
-.bottom-column[
 .left-column[
 &lt;img src="https://pbs.twimg.com/media/C8IFatuU0AAO-xc.jpg" align="center" /&gt;
 ```r
 head(gss_cat)
 ```
 ]
+--
 .right-column[
 
 ```
@@ -244,7 +394,7 @@ head(gss_cat)
 ## 8  2000 Divorced     44 White $7000 to~ Ind,near ~ Protest~ Luther~      NA
 ```
 ]
-]
+
 
 ---
 #Just add a image
@@ -259,13 +409,14 @@ head(gss_cat)
 ```r
 ![](/imgs/ocrug.jpeg){width=10px}
 ```
-
+--
 `Option 2`:
 ```r
 &lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
 ```
 &lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
 
+--
 
 `Option 2`: out.width = "20%"
 
