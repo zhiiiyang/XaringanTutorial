@@ -6,7 +6,8 @@
     <meta name="author" content="Zhi Yang" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/rladies.css" rel="stylesheet" />
-    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/middlebury-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my-style.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -18,6 +19,8 @@ class: center, middle, inverse, title-slide
 ### 2019/1/9
 
 ---
+
+
 
 
 
@@ -39,13 +42,15 @@ Do you use `ctrl + K` to render your Markdown file?
 
 ### Turn on the `Moon Reader` from either the pacakge or the addin
 
-### From now on, the slides will auto-reloaded after you hit `ctrl + S`
+### From now on, the slides will auto-reload after you hit `ctrl + S`
 
 ---
 class: center, middle
 
 # Keyboard shortcuts
 Press `h` or `?` 
+
+--
 
 `m` -&gt; mirror
 
@@ -83,7 +88,8 @@ names(xaringan:::list_css())
 ## [25] "uo-fonts"         "uo"
 ```
 
-These go to your YAML
+--
+  These go to your YAML
 
 
 ```r
@@ -99,6 +105,7 @@ class: center, middle
 &lt;img src="imgs/dark.jpg" width=80% align="center" /&gt;
 
 &lt;img src="imgs/light.jpg" width=80% align="center" /&gt;
+
 
 
 ---
@@ -140,25 +147,104 @@ do this?
 .top-column[
 ```r
 .pull-left[
-![](imgs/ocrug_logo.png)
+code evel = FALSE
 ]
 .pull-right[
-![](https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg)
+code echo=FALSE, eval=TRUE
 ]
 ```
 ]
+
+
+`.pull-left` and `.pull-right` provide 47% width 
+
+--
+
+.bottom-column[
+.pull-left[
+
+```r
+namedata_M &lt;- babynames %&gt;%
+  filter(name == "Orange") %&gt;% 
+* filter(sex == "M") %&gt;%
+  arrange(year)
+
+namedata_F &lt;- babynames %&gt;%
+  filter(name == "Orange") %&gt;% 
+* filter(sex == "F") %&gt;%
+  arrange(year)
+
+head(namedata_M) 
+head(namedata_F) 
+```
+]
+.pull-right[
+
+```
+## # A tibble: 6 x 5
+##    year sex   name       n      prop
+##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;     &lt;dbl&gt;
+## 1  1881 M     Orange     9 0.0000831
+## 2  1882 M     Orange     8 0.0000656
+## 3  1883 M     Orange    11 0.0000978
+## 4  1884 M     Orange    13 0.000106 
+## 5  1885 M     Orange     8 0.000069 
+## 6  1886 M     Orange     7 0.0000588
+```
+
+```
+## # A tibble: 3 x 5
+##    year sex   name       n       prop
+##   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;      &lt;dbl&gt;
+## 1  1920 F     Orange     5 0.00000402
+## 2  1922 F     Orange     6 0.00000481
+## 3  1928 F     Orange     7 0.00000586
+```
+]
+]
+
+---
+# Two-columns
+.top-column[
+```r
+.left-column[
+code evel = FALSE
+]
+.right-column[
+code echo=FALSE, eval=TRUE
+]
+```
+]
+
+
+`.left-column` and `.right-column` provide 20% and 75% width 
 
 --
 
 .bottom-column[
 .left-column[
-&lt;img src="imgs/ocrug_logo.png" align="right"&gt;
+&lt;img src="https://pbs.twimg.com/media/C8IFatuU0AAO-xc.jpg" align="center" /&gt;
+```r
+head(gss_cat)
+```
 ]
 .right-column[
-&lt;img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" align="middle"&gt;  
-]
-]
 
+```
+## # A tibble: 8 x 9
+##    year marital     age race  rincome   partyid    relig    denom   tvhours
+##   &lt;int&gt; &lt;fct&gt;     &lt;int&gt; &lt;fct&gt; &lt;fct&gt;     &lt;fct&gt;      &lt;fct&gt;    &lt;fct&gt;     &lt;int&gt;
+## 1  2000 Never ma~    26 White $8000 to~ Ind,near ~ Protest~ Southe~      12
+## 2  2000 Divorced     48 White $8000 to~ Not str r~ Protest~ Baptis~      NA
+## 3  2000 Widowed      67 White Not appl~ Independe~ Protest~ No den~       2
+## 4  2000 Never ma~    39 White Not appl~ Ind,near ~ Orthodo~ Not ap~       4
+## 5  2000 Divorced     25 White Not appl~ Not str d~ None     Not ap~       1
+## 6  2000 Married      25 White $20000 -~ Strong de~ Protest~ Southe~      NA
+## 7  2000 Never ma~    36 White $25000 o~ Not str r~ Christi~ Not ap~       3
+## 8  2000 Divorced     44 White $7000 to~ Ind,near ~ Protest~ Luther~      NA
+```
+]
+]
 
 ---
 #Just add a image

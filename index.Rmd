@@ -5,7 +5,7 @@ author: "Zhi Yang"
 date: "2019/1/9"
 output:
   xaringan::moon_reader:
-    css: ["default", "rladies", "default-fonts"]
+    css: ["default", "rladies", "middlebury-fonts", "my-style.css"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -17,7 +17,11 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(tidy = FALSE, tidy.opts=list(width.cutoff=40))
+library(babynames)
+library(tidyverse)
 ```
+
+
 class: center, middle
 
 # Meet xaringan
@@ -36,13 +40,15 @@ Do you use `ctrl + K` to render your Markdown file?
 
 ### Turn on the `Moon Reader` from either the pacakge or the addin
 
-### From now on, the slides will auto-reloaded after you hit `ctrl + S`
+### From now on, the slides will auto-reload after you hit `ctrl + S`
 
 ---
 class: center, middle
 
 # Keyboard shortcuts
 Press `h` or `?` 
+
+--
 
 `m` -> mirror
 
@@ -67,7 +73,8 @@ Press `h` or `?`
 names(xaringan:::list_css())
 ```
 
-These go to your YAML
+--
+  These go to your YAML
 
 ```{r eval = FALSE}
 output:
@@ -82,6 +89,7 @@ class: center, middle
 <img src="imgs/dark.jpg" width=80% align="center" />
 
 <img src="imgs/light.jpg" width=80% align="center" />
+
 
 
 ---
@@ -123,25 +131,83 @@ do this?
 .top-column[
 ```r
 .pull-left[
-![](imgs/ocrug_logo.png)
+code evel = FALSE
 ]
 .pull-right[
-![](https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg)
+code echo=FALSE, eval=TRUE
 ]
 ```
 ]
+
+
+`.pull-left` and `.pull-right` provide 47% width 
+
+--
+
+.bottom-column[
+.pull-left[
+```{r eval=FALSE}
+namedata_M <- babynames %>%
+  filter(name == "Orange") %>% 
+  filter(sex == "M") %>% #<< 
+  arrange(year)
+
+namedata_F <- babynames %>%
+  filter(name == "Orange") %>% 
+  filter(sex == "F") %>% #<< 
+  arrange(year)
+
+head(namedata_M) 
+head(namedata_F) 
+```
+]
+.pull-right[
+```{r echo=FALSE, eval=TRUE}
+namedata_M <- babynames %>%
+  filter(name == "Orange") %>% 
+  filter(sex == "M") %>% 
+  arrange(year)
+head(namedata_M) 
+namedata_F <- babynames %>%
+  filter(name == "Orange") %>% 
+  filter(sex == "F") %>% 
+  arrange(year)
+head(namedata_F) 
+```
+]
+]
+
+---
+# Two-columns
+.top-column[
+```r
+.left-column[
+code evel = FALSE
+]
+.right-column[
+code echo=FALSE, eval=TRUE
+]
+```
+]
+
+
+`.left-column` and `.right-column` provide 20% and 75% width 
 
 --
 
 .bottom-column[
 .left-column[
-<img src="imgs/ocrug_logo.png" align="right">
+<img src="https://pbs.twimg.com/media/C8IFatuU0AAO-xc.jpg" align="center" />
+```r
+head(gss_cat)
+```
 ]
 .right-column[
-<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" align="middle">  
+```{r echo=FALSE, eval=TRUE}
+head(gss_cat, n = 8)
+```
 ]
 ]
-
 
 ---
 #Just add a image
