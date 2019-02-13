@@ -21,13 +21,19 @@ library(babynames)
 library(tidyverse)
 ```
 
-
 class: center, middle
 
+.pull-left[
+<img src="https://memegenerator.net/img/instances/59789407.jpg"/ width="80%">
+]
+--
+.pull-bottom[
+<img src="https://i2.wp.com/erickimphotography.com/blog/wp-content/uploads/2018/09/steve-jobs-interview-11.png" width="40%"/>
+]
+--
+
 # Meet xaringan
-
-<img src="https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png" alt="Sharingan" width="180" />
-
+<img src="https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png" alt="Sharingan" width="30%" />
 
 ---
 # Infinite moon reader `r emo::ji("astronaut")`
