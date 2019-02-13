@@ -35,6 +35,7 @@ class: center, middle
 # Meet xaringan
 <img src="https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png" alt="Sharingan" width="30%" />
 
+
 ---
 #The slides are too pretty to say NO!
 .pull-left[
@@ -58,6 +59,8 @@ Do you use `ctrl + K` to render your Markdown file?
   - So, Are you tired from scrolling down to the page you were editing? 
 
   <img src="https://memegenerator.net/img/instances/61114187.jpg" width='50%' align="middle"/>
+  
+
 --
 
 
