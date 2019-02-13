@@ -48,6 +48,7 @@ class: center, middle
 ]
 
 ??? 
+https://github.com/emitanaka/ninja-theme
 https://github.com/EvaMaeRey/ggplot_flipbookp
 https://www.pzhao.org/zh/post/xaringan-animate-single/
 
@@ -462,6 +463,11 @@ background-size: 10%, 10%
 
 ---
 ```
+
+---
+# Hosting slides `r fontawesome::fa("github")`
+
+
 
 ---
 # Netlify `r emo::ji("computer")`
