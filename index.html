@@ -6,7 +6,7 @@
     <meta name="author" content="Zhi Yang" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/rladies.css" rel="stylesheet" />
-    <link href="libs/remark-css/middlebury-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/lucy-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="my-style.css" type="text/css" />
   </head>
   <body>
@@ -23,40 +23,56 @@ class: center, middle, inverse, title-slide
 
 
 
-class: center, middle
+# How I met Xaringan &lt;img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/&gt;
+An `R` user who would like to share awesome things in `R`. 
 
 .pull-left[
-&lt;img src="https://memegenerator.net/img/instances/59789407.jpg"/ width="80%"&gt;
+Who'd like to show a bunch of `R code snippets` without losing taste. 
+&lt;img src="https://i2.wp.com/erickimphotography.com/blog/wp-content/uploads/2018/09/steve-jobs-interview-11.png" width="90%" /&gt;
 ]
---
-.pull-bottom[
-&lt;img src="https://i2.wp.com/erickimphotography.com/blog/wp-content/uploads/2018/09/steve-jobs-interview-11.png" width="40%"/&gt;
+ 
+.pull-right[
+Who's got no time nor money on formatting. 
+&lt;img src="https://cdn-images-1.medium.com/max/800/1*8Z1xFlBtHVN1rY7oWFnlIg.gif"/&gt;
 ]
---
-
-# Meet xaringan
-&lt;img src="https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png" alt="Sharingan" width="30%" /&gt;
-
 
 ---
-#The slides are too pretty to say NO!
-.pull-left[
-![](https://github.com/emitanaka/ninja-theme/raw/master/docs/themes/kunoichi/images/kunoichi-showcase.gif)
-]
-.pull-right[
-![](https://www.garrickadenbuie.com/images/2018/animated-xaringan-slides/xaringan-animated.gif)
-]
-.pull-left[
-![](imgs/ggplot2.gif)
-]
+class: left, middle
 
-??? 
+# Meet Xaringan &lt;img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/&gt;
+####Beautiful design and tidy layout
+![](https://github.com/emitanaka/ninja-theme/raw/master/docs/themes/kunoichi/images/kunoichi-showcase.gif)
+
+???
 https://github.com/emitanaka/ninja-theme
 https://github.com/EvaMaeRey/ggplot_flipbookp
 https://www.pzhao.org/zh/post/xaringan-animate-single/
 
 ---
-# Infinite moon reader 👩‍🚀
+
+# Meet xaringan &lt;img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/&gt;
+####Code and highlight; interactive live demo
+![](imgs/ggplot2.gif)
+
+???
+PPT has lots of fancy themes too
+---
+# Meet xaringan &lt;img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/&gt;
+  - Version control and easy distribution
+  
+  - Import from PPTX; it animates
+  
+  ![](https://www.garrickadenbuie.com/images/2018/animated-xaringan-slides/xaringan-animated.gif)
+
+
+---
+# Meet xaringan &lt;img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/&gt;
+
+#### Theme customization with CSS
+
+
+---
+# Infinite moon reader 👨‍🚀
 Do you use `ctrl + K` to render your Markdown file?
   - So, Are you tired from scrolling down to the page you were editing? 
 
@@ -65,10 +81,9 @@ Do you use `ctrl + K` to render your Markdown file?
 
 --
 
+Turn on the `Moon Reader` from either the pacakge or the addins
 
-### Turn on the `Moon Reader` from either the pacakge or the addin
-
-### From now on, the slides will auto-reload after you hit `ctrl + S`
+From now on, the slides will auto-reload every time you `save` it
 
 ---
 class: center, middle
@@ -111,8 +126,7 @@ names(xaringan:::list_css())
 ## [16] "rladies-fonts"    "rladies"          "robot-fonts"     
 ## [19] "robot"            "rutgers-fonts"    "rutgers"         
 ## [22] "shinobi"          "tamu-fonts"       "tamu"            
-## [25] "uo-fonts"         "uo"               "uol-fonts"       
-## [28] "uol"
+## [25] "uo-fonts"         "uo"
 ```
 
 --
@@ -365,7 +379,7 @@ head(namedata_F)
 ## 2  1882 M     Orange     8 0.0000656
 ## 3  1883 M     Orange    11 0.0000978
 ## 4  1884 M     Orange    13 0.000106 
-## 5  1885 M     Orange     8 0.0000690
+## 5  1885 M     Orange     8 0.000069 
 ## 6  1886 M     Orange     7 0.0000588
 ```
 
@@ -411,14 +425,14 @@ head(gss_cat)
 ## # A tibble: 8 x 9
 ##    year marital     age race  rincome   partyid    relig    denom   tvhours
 ##   &lt;int&gt; &lt;fct&gt;     &lt;int&gt; &lt;fct&gt; &lt;fct&gt;     &lt;fct&gt;      &lt;fct&gt;    &lt;fct&gt;     &lt;int&gt;
-## 1  2000 Never ma…    26 White $8000 to… Ind,near … Protest… Southe…      12
-## 2  2000 Divorced     48 White $8000 to… Not str r… Protest… Baptis…      NA
-## 3  2000 Widowed      67 White Not appl… Independe… Protest… No den…       2
-## 4  2000 Never ma…    39 White Not appl… Ind,near … Orthodo… Not ap…       4
-## 5  2000 Divorced     25 White Not appl… Not str d… None     Not ap…       1
-## 6  2000 Married      25 White $20000 -… Strong de… Protest… Southe…      NA
-## 7  2000 Never ma…    36 White $25000 o… Not str r… Christi… Not ap…       3
-## 8  2000 Divorced     44 White $7000 to… Ind,near … Protest… Luther…      NA
+## 1  2000 Never ma~    26 White $8000 to~ Ind,near ~ Protest~ Southe~      12
+## 2  2000 Divorced     48 White $8000 to~ Not str r~ Protest~ Baptis~      NA
+## 3  2000 Widowed      67 White Not appl~ Independe~ Protest~ No den~       2
+## 4  2000 Never ma~    39 White Not appl~ Ind,near ~ Orthodo~ Not ap~       4
+## 5  2000 Divorced     25 White Not appl~ Not str d~ None     Not ap~       1
+## 6  2000 Married      25 White $20000 -~ Strong de~ Protest~ Southe~      NA
+## 7  2000 Never ma~    36 White $25000 o~ Not str r~ Christi~ Not ap~       3
+## 8  2000 Divorced     44 White $7000 to~ Ind,near ~ Protest~ Luther~      NA
 ```
 ]
 
@@ -432,24 +446,23 @@ head(gss_cat)
 
 ---
 #Resize it
-`Should it be something like?` 😢
-```r
-![](/imgs/ocrug.jpeg){width=10px}
-```
+Should it be something like `![](/imgs/ocrug.jpeg){width=10px}` ? 😢
 --
-`Option 2`:
-```r
-&lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
+
+Option 1:
+```markdown
+&lt;img src="imgs/ocrug.jpeg" width="20%" /&gt;
 ```
-&lt;img src="imgs/ocrug.jpeg" width=20% align="middle" /&gt;
+&lt;img src="imgs/ocrug.jpeg" width="20%" /&gt;
 
 --
 
-`Option 2`: out.width = "20%"
-
-```r
+Option 2: 
+````markdown
+```{r out.width = "20%", eval=TRUE}
 knitr::include_graphics("imgs/ocrug.jpeg")
 ```
+````
 
 &lt;img src="imgs/ocrug.jpeg" width="20%" /&gt;
 
@@ -579,7 +592,7 @@ class: center, middle
 
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan)
 
-Template created by [Alison Hill](https://twitter.com/apreshill)
+Template created by [Emi Tanaka](https://twitter.com/statsgen)
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
