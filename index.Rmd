@@ -32,14 +32,15 @@ who'd like to show a bunch of `R code snippets` without losing taste.
 who's got no time nor money on formatting. 
 <img src="https://cdn-images-1.medium.com/max/800/1*8Z1xFlBtHVN1rY7oWFnlIg.gif"/>
 ]
-
+ 
 ???
 https://medium.com/@jakeout/deprecate-keynote-78f0f09424dd
 ---
 class: left, middle
 
 # Meet Xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-####Beautiful theme with CSS
+Beautiful theme with CSS
+
 .center[![](https://github.com/emitanaka/ninja-theme/raw/master/docs/themes/kunoichi/images/kunoichi-showcase.gif)]
 
 ???
@@ -48,13 +49,23 @@ https://github.com/EvaMaeRey/ggplot_flipbookp
 https://www.pzhao.org/zh/post/xaringan-animate-single/
 
 ---
-
 # Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-####Code and highlight; interactive live demo
-.center[![](imgs/ggplot2.gif)]
+Code and highlight
+
+<img src=imgs/ml.gif width="47%"> <img src=imgs/showcase.gif width="47%">
+
+
+
 ---
 # Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-#### Version control and easy distribution  
+live demo
+
+.center[![](imgs/ggplot2.gif)]
+
+
+---
+# Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
+Version control and easy distribution  
 
 .center[
 
@@ -64,7 +75,7 @@ https://www.pzhao.org/zh/post/xaringan-animate-single/
 
 ---
 # Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-####It animates and can even import from PPTX
+It animates and can even import from PPTX
   
 .center[![](https://www.garrickadenbuie.com/images/2018/animated-xaringan-slides/xaringan-animated.gif)
 ]
@@ -326,7 +337,7 @@ namedata <- babynames %>%
   filter(sex == "M") %>% #<< 
   arrange(year)
 
-head(namedata_M) 
+head(namedata) 
 ```
 ````
 ]
@@ -340,7 +351,7 @@ namedata <- babynames %>%
   filter(sex == "M") %>% #<< 
   arrange(year)
 
-head(namedata_M) 
+head(namedata) 
 ```
 ]
 
@@ -357,7 +368,7 @@ namedata <- babynames %>%
   filter(sex == "M") %>% #<< 
   arrange(year)
 
-head(namedata_M) 
+head(namedata) 
 ```
 ````
 ]
@@ -370,7 +381,7 @@ namedata <- babynames %>%
   filter(sex == "M") %>% #<< 
   arrange(year)
 
-head(namedata_M) 
+head(namedata) 
 ```
 ]
 
@@ -403,7 +414,7 @@ namedata <- babynames %>%
   filter(sex == "M") %>% #<< 
   arrange(year)
 
-head(namedata_M) 
+head(namedata) 
 ```
 ]
 
