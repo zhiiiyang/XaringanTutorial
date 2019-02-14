@@ -1,5 +1,8 @@
-# XaringanTutorial
+# XaringanTutorial <img src="imgs/icon.png" align="right" width="120" />
+
+
 A quick tutorial on making slides using xaringan
+
 
 GitHub Page: https://zhiiiyang.github.io/XaringanTutorial/
 
