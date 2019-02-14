@@ -33,6 +33,8 @@ who's got no time nor money on formatting.
 <img src="https://cdn-images-1.medium.com/max/800/1*8Z1xFlBtHVN1rY7oWFnlIg.gif"/>
 ]
 
+???
+https://medium.com/@jakeout/deprecate-keynote-78f0f09424dd
 ---
 class: left, middle
 
