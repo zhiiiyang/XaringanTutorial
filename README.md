@@ -12,8 +12,10 @@ More about xaringan:
 
 - [Presentation Ninja ⚔ with xaringan](https://slides.yihui.name/xaringan/)
 - [Contribute to Open Source with Pretty Slides](http://www.datalorax.com/talks/cascadia18/#1)
-- [https://github.com/emitanaka/ninja-theme](https://emitanaka.github.io/ninja-theme/#1) [(repo)](https://github.com/emitanaka/ninja-theme)
+- [xaringan / remark js ninja themes](https://emitanaka.github.io/ninja-theme/) [(repo)](https://github.com/emitanaka/ninja-theme)
 - [the ggplot flipbook](https://evamaerey.github.io/ggplot_flipbook/ggplot_flipbook_xaringan.html)[(repo)](https://github.com/EvaMaeRey/ggplot_flipbook)
+- [Machine Learning 101](https://sarahromanes.github.io/r-ladies-ML-1/)
+- [What I Wish I Knew When I Started R](https://www.williamrchase.com/slides/intro_r_anthropology_2018)
 - [Meet xaringan](https://arm.rbind.io/slides/xaringan.html)
 - [Making Slides in the Tada!-verse](https://apreshill.github.io/data-vis-labs-2018/slides/06-slides_xaringan.html#1)
 - [Xaringan example RU template](https://www.jvcasillas.com/ru_xaringan/slides/index.html)
