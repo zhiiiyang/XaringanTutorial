@@ -22,15 +22,14 @@ library(tidyverse)
 ```
 
 # How I met Xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-An `R` user who would like to share awesome things in `R`. 
-
+.center[An `R` user who would like to share awesome things in `R`. ]
 .pull-left[
-Who'd like to show a bunch of `R code snippets` without losing taste. 
+who'd like to show a bunch of `R code snippets` without losing taste. 
 <img src="https://i2.wp.com/erickimphotography.com/blog/wp-content/uploads/2018/09/steve-jobs-interview-11.png" width="90%" />
 ]
  
 .pull-right[
-Who's got no time nor money on formatting. 
+who's got no time nor money on formatting. 
 <img src="https://cdn-images-1.medium.com/max/800/1*8Z1xFlBtHVN1rY7oWFnlIg.gif"/>
 ]
 
@@ -38,8 +37,8 @@ Who's got no time nor money on formatting.
 class: left, middle
 
 # Meet Xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-####Beautiful design and tidy layout
-![](https://github.com/emitanaka/ninja-theme/raw/master/docs/themes/kunoichi/images/kunoichi-showcase.gif)
+####Beautiful theme with CSS
+.center[![](https://github.com/emitanaka/ninja-theme/raw/master/docs/themes/kunoichi/images/kunoichi-showcase.gif)]
 
 ???
 https://github.com/emitanaka/ninja-theme
@@ -50,38 +49,36 @@ https://www.pzhao.org/zh/post/xaringan-animate-single/
 
 # Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
 ####Code and highlight; interactive live demo
-![](imgs/ggplot2.gif)
-
-???
-PPT has lots of fancy themes too
+.center[![](imgs/ggplot2.gif)]
 ---
 # Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-  - Version control and easy distribution
-  
-  - Import from PPTX; it animates
-  
-  ![](https://www.garrickadenbuie.com/images/2018/animated-xaringan-slides/xaringan-animated.gif)
+#### Version control and easy distribution  
 
+.center[
+
+<img src=https://marketplace-cdn.atlassian.com/files/images/cec44feb-0b1b-4fe3-936d-67a51a1fe28e.png width="50%">
+<img src=https://doconfig.netlify.com/images/logos/netlify.jpg width="50%") />
+]
 
 ---
 # Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-
-#### Theme customization with CSS
-
+####It animates and can even import from PPTX
+  
+.center[![](https://www.garrickadenbuie.com/images/2018/animated-xaringan-slides/xaringan-animated.gif)
+]
 
 ---
 # Infinite moon reader `r emo::ji("astronaut")`
-Do you use `ctrl + K` to render your Markdown file?
-  - So, Are you tired from scrolling down to the page you were editing? 
+Do you use `ctrl + K` to render your slides?
+  - So, Are you tired from scrolling down to the page you were working on? 
 
-  <img src="https://memegenerator.net/img/instances/61114187.jpg" width='50%' align="middle"/>
-  
+.center[<img src="https://memegenerator.net/img/instances/61114187.jpg" width='50%' align="middle"/>]  
 
 --
 
-Turn on the `Moon Reader` from either the pacakge or the addins
+####Turn on the `Moon Reader` from either the pacakge or the addins
 
-From now on, the slides will auto-reload every time you `save` it
+####From now on, the slides will auto-reload every time you `save` it
 
 ---
 class: center, middle
@@ -139,7 +136,7 @@ Add `my-style.css` to the YAML to override the current css file
 ```{r eval = FALSE}
 output:
   xaringan::moon_reader:
-    css: [default, rladies, rladies-fonts, my-style.css] #<<
+    css: [default, rladies, lucy-fonts, my-style.css] #<<
 ```
 
 --
@@ -188,7 +185,7 @@ date: "2019/1/9"
 output:
   xaringan::moon_reader:
     css: ["default", "rladies", 
-          "middlebury-fonts", 
+          "lucy-fonts", 
           "my-style.css"]
     lib_dir: libs
     nature:
@@ -284,7 +281,7 @@ class: center, middle
 
 .left-column[
 
-```
+```markdown
 # Hi
 
 Did you know
@@ -314,18 +311,83 @@ you can
 do this?
 
 ---
-# Two-columns
-.top-column[
-```r
+# Code and higtlight
+use the trailing comment `#<<` to highlight specific lines of the code
+
 .pull-left[
-code refname eacho=TRUE, eval=FALSE
+Source:
+
+````markdown
+`r ''````{r}
+namedata <- babynames %>%
+  filter(name == "Orange") %>% 
+  filter(sex == "M") %>% #<< 
+  arrange(year)
+
+head(namedata_M) 
+```
+````
 ]
+
 .pull-right[
-ref.label="refname" echo=FALSE, eval=TRUE
-]
+Output:
+
+```{r eval=FALSE}
+namedata <- babynames %>%
+  filter(name == "Orange") %>% 
+  filter(sex == "M") %>% #<< 
+  arrange(year)
+
+head(namedata_M) 
 ```
 ]
 
+---
+# Output and higtlight
+use the chunk option `highlight.output` to highlight specific lines of the text output
+
+.pull-left[
+Source:
+````markdown
+`r ''````{r head, highlight.output=c(1, 3)}
+namedata <- babynames %>%
+  filter(name == "Orange") %>% 
+  filter(sex == "M") %>% #<< 
+  arrange(year)
+
+head(namedata_M) 
+```
+````
+]
+
+.pull-right[
+Output: 
+```{r, highlight.output=c(1, 3), echo=FALSE}
+namedata <- babynames %>%
+  filter(name == "Orange") %>% 
+  filter(sex == "M") %>% #<< 
+  arrange(year)
+
+head(namedata_M) 
+```
+]
+
+---
+# Two-columns
+.top-column[
+````md
+.pull-left[
+`r ''````{r refname echo=TRUE, eval=FALSE}
+your R code 
+```
+]
+.pull-right[
+`r ''````{r ref.label="refname" echo=FALSE, eval=TRUE}
+
+```
+]
+````
+]
 
 `.pull-left` and `.pull-right` provide 47% width 
 
@@ -334,18 +396,12 @@ ref.label="refname" echo=FALSE, eval=TRUE
 
 .pull-left[
 ```{r babynames, eacho=TRUE, eval=FALSE}
-namedata_M <- babynames %>%
+namedata <- babynames %>%
   filter(name == "Orange") %>% 
   filter(sex == "M") %>% #<< 
   arrange(year)
 
-namedata_F <- babynames %>%
-  filter(name == "Orange") %>% 
-  filter(sex == "F") %>% #<< 
-  arrange(year)
-
 head(namedata_M) 
-head(namedata_F) 
 ```
 ]
 
@@ -357,20 +413,20 @@ head(namedata_F)
 ```
 ]
 
-
 ---
 # Two-columns
-.top-column[
-```r
+````md
 .left-column[
-code evel = FALSE
-]
-.right-column[
-code echo=FALSE, eval=TRUE
-]
+`r ''````{r evel = FALSE}
+Your R code
 ```
 ]
-
+.right-column[
+`r ''````{r evel = FALSE, echo = FALSE}
+Your R code
+```
+]
+````
 
 `.left-column` and `.right-column` provide 20% and 75% width 
 
@@ -385,13 +441,13 @@ head(gss_cat)
 --
 .right-column[
 ```{r echo=FALSE, eval=TRUE}
-head(gss_cat, n = 8)
+head(gss_cat)
 ```
 ]
 
 
 ---
-#Just add a image
+#Add a image
 ```r
 ![](/imgs/ocrug.jpeg)
 ```
