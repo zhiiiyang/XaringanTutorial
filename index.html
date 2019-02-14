@@ -83,7 +83,7 @@ It animates and can even import from PPTX
 ]
 
 ---
-# Infinite moon reader 👩‍🚀
+# Infinite moon reader 👨‍🚀
 Do you use `ctrl + K` to render your slides?
   - So, Are you tired from scrolling down to the page you were working on? 
 
@@ -129,14 +129,15 @@ names(xaringan:::list_css())
 
 ```
 ##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"   
-##  [4] "default"          "duke-blue"        "hygge-duke"      
-##  [7] "hygge"            "kunoichi"         "lucy-fonts"      
-## [10] "lucy"             "metropolis-fonts" "metropolis"      
-## [13] "middlebury-fonts" "middlebury"       "ninjutsu"        
-## [16] "rladies-fonts"    "rladies"          "robot-fonts"     
-## [19] "robot"            "rutgers-fonts"    "rutgers"         
-## [22] "shinobi"          "tamu-fonts"       "tamu"            
-## [25] "uo-fonts"         "uo"
+##  [4] "default"          "duke-blue"        "fc-fonts"        
+##  [7] "fc"               "hygge-duke"       "hygge"           
+## [10] "kunoichi"         "lucy-fonts"       "lucy"            
+## [13] "metropolis-fonts" "metropolis"       "middlebury-fonts"
+## [16] "middlebury"       "ninjutsu"         "rladies-fonts"   
+## [19] "rladies"          "robot-fonts"      "robot"           
+## [22] "rutgers-fonts"    "rutgers"          "shinobi"         
+## [25] "tamu-fonts"       "tamu"             "uo-fonts"        
+## [28] "uo"               "uol-fonts"        "uol"
 ```
 
 --
@@ -657,6 +658,7 @@ Slides created via the R package [**xaringan**](https://github.com/yihui/xaringa
 
 Template created by [Emi Tanaka](https://twitter.com/statsgen)
     </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
@@ -666,12 +668,53 @@ Template created by [Emi Tanaka](https://twitter.com/statsgen)
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
 })();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
 
 <script>
 (function() {
