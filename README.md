@@ -8,8 +8,7 @@ GitHub Page: https://zhiiiyang.github.io/XaringanTutorial/
 
 Netlify Page: https://xaringantutorial.netlify.com
 
----
-## **More about xaringan:**
+More about xaringan:
 
 ### Tutorials: 
 - [Presentation Ninja ⚔ with xaringan](https://slides.yihui.name/xaringan/) 
