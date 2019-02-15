@@ -539,7 +539,7 @@ layout: true #<<
 background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)
 background-position: 0% 100%, 100% 0%
 background-size: 10%, 10%
-
+ 
 ---
 ```
 
