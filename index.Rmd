@@ -22,40 +22,30 @@ library(tidyverse)
 ```
 
 # How I met Xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-.center[An `R` user who would like to share awesome things in `R`. ]
+.center[An `R` user who would like to share awesome things in `R`]
+--
 .pull-left[
-who'd like to show a bunch of `R code snippets` without losing taste. 
+by showing a bunch of `R code snippets` without losing taste. 
 <img src="https://i2.wp.com/erickimphotography.com/blog/wp-content/uploads/2018/09/steve-jobs-interview-11.png" width="90%" />
 ]
- 
+--
 .pull-right[
-who's got no time nor money on formatting. 
+given no time nor money on formatting codes and adjusting layouts. 
 <img src="https://cdn-images-1.medium.com/max/800/1*8Z1xFlBtHVN1rY7oWFnlIg.gif"/>
 ]
  
 ???
 https://medium.com/@jakeout/deprecate-keynote-78f0f09424dd
----
-class: left, middle
-
-# Meet Xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-Beautiful theme with CSS
-
-.center[![](https://github.com/emitanaka/ninja-theme/raw/master/docs/themes/kunoichi/images/kunoichi-showcase.gif)]
-
-???
 
 ---
 # Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-Code and highlight
+Beautiful and concise layout
 
-<img src=imgs/ml.gif width="47%"> <img src=imgs/showcase.gif width="47%">
-
-
-
+.center[<img src=imgs/ml.gif width="47%"> <img src=imgs/showcase.gif width="47%">]
+.center[<img src=imgs/du.gif width="47%">]
 ---
 # Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-live demo
+Code highlighting and live demos
 
 .center[![](imgs/ggplot2.gif)]
 
