@@ -29,7 +29,7 @@ by showing a bunch of `R code snippets` without losing taste.
 <img src="https://i2.wp.com/erickimphotography.com/blog/wp-content/uploads/2018/09/steve-jobs-interview-11.png" width="90%" />
 ]
 --
-.pull-right[
+.pull-right[ 
 given no time nor money on formatting codes and adjusting layouts. 
 <img src="https://cdn-images-1.medium.com/max/800/1*8Z1xFlBtHVN1rY7oWFnlIg.gif"/>
 ]
