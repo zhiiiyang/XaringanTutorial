@@ -544,8 +544,7 @@ background-size: 10%, 10%
 
 ---
 # Hosting slides `r fontawesome::fa("github")`
-
-
+.center[<img src="imgs/github.png" width="80%" />]
 
 ---
 # Netlify `r emo::ji("computer")`
@@ -603,6 +602,6 @@ class: center, middle
 
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan)
 
-Template created by [Emi Tanaka](https://twitter.com/statsgen)
+Template created by [Alison Hill](https://alison.rbind.io/)
 
 
