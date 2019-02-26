@@ -499,6 +499,7 @@ use `fig.height` and `fig.width` to control the size
 ---
 #Resize it
 Should it be something like `![](/imgs/ocrug.jpeg){width=10px}` ? `r emo::ji("cry")`
+
 --
 
 Option 1:
@@ -641,6 +642,12 @@ background-size: 30%, 10%
 class: center, middle
 
 # Thanks!
+
+<br>
+@zhiiiyang
+
+https://github.com/zhiiiyang/XaringanTutorial
+<br>
 
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan)
 
