@@ -62,10 +62,11 @@ Version control and easy distribution
 
 ---
 # Meet xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
-It animates and can even import from PPTX
+It animates 
   
 .center[![](https://www.garrickadenbuie.com/images/2018/animated-xaringan-slides/xaringan-animated.gif)
 ]
+
 
 ---
 # Infinite moon reader `r emo::ji("astronaut")`
@@ -135,7 +136,7 @@ class: center, middle
 <img src="imgs/light.jpg" width=80% align="center" />
 
 ---
-# What if I am something in the middle?
+# Somewhere in the middle?
 
 Add `my-style.css` to the YAML to override the current css file 
     
@@ -156,10 +157,27 @@ While sitting in my-style.css file,
     font-weight: 300;
 }
 ```
+--
+I've changed it to .red[red].
+
+---
+# Where to find the themes files? 
+You can find CSS files here. However, don't save your own CSS file here. 
+
+.center[![](/imgs/themelibs.PNG)]
 
 --
 
-I've changed it to .red[red].
+### - start with an existing theme 
+### - try change something and see what happens 
+
+---
+# Meet slidex 
+It converts PowerPoint slides to xaringan slides  
+
+.center[![](https://github.com/datalorax/slidex/raw/master/docs/slidex-preview.gif)]
+
+
 
 ---
 #Start with the YAML
