@@ -469,6 +469,24 @@ head(gss_cat)
 ```
 ]
 
+---
+#Add a table 
+```{r eval=TRUE}
+head(iris, n = 3)
+knitr::kable(head(iris, n = 3), format = "html")
+```
+
+Set the table to be the `HTML` format
+
+
+---
+#Add a plot
+````{r eval=TRUE, fig.height = 5, fig.width = 5}
+par(mar = c(4, 4, 1, 0.1))
+plot(cars, pch = 19, col = "darkgray", las = 1)
+```
+
+use `fig.height` and `fig.width` to control the size
 
 ---
 #Add a image
@@ -553,18 +571,17 @@ background-position: bottom
 background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)
 background-position: 0% 100%, 100% 0%
 background-size: 30%, 10%
-#Logos 
 
-```
----
+# Logos 
+
+```{markdown}
 layout: true #<<
 
 background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)
 background-position: 0% 100%, 100% 0%
 background-size: 10%, 10%
-
----
 ```
+
 
 ---
 # Hosting slides `r fontawesome::fa("github")`
