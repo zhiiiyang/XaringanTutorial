@@ -81,6 +81,12 @@ Do you use `ctrl + K` to render your slides?
 ####From now on, the slides will auto-reload every time you `save` it
 
 ---
+# Infinite moon reader `r emo::ji("astronaut")`
+
+.center[![](https://user-images.githubusercontent.com/163582/53144527-35f7a500-3562-11e9-862e-892d3fd7036d.gif)]
+
+
+---
 class: center, middle
 
 # Keyboard shortcuts
