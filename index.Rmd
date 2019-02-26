@@ -134,6 +134,7 @@ class: center, middle
 <img src="imgs/dark.jpg" width=80% align="center" />
 
 <img src="imgs/light.jpg" width=80% align="center" />
+https://pkg.garrickadenbuie.com/xaringanthemer/
 
 ---
 # Somewhere in the middle?
@@ -561,7 +562,7 @@ background-position: bottom
 
 # Use online image
 
-```r
+```markdown
 background-image: url(https://secure.meetupstatic.com/photos/event/2/b/9/e/600_471491166.jpeg)
 background-size: contain
 background-position: bottom
@@ -574,14 +575,14 @@ background-size: 30%, 10%
 
 # Logos 
 
-```{markdown}
+
+```markdown
 layout: true #<<
 
 background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)
 background-position: 0% 100%, 100% 0%
-background-size: 10%, 10%
+background-size: 30%, 10%
 ```
-
 
 ---
 # Hosting slides `r fontawesome::fa("github")`
