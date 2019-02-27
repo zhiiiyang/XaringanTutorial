@@ -139,7 +139,7 @@ https://pkg.garrickadenbuie.com/xaringanthemer/
 ---
 # Somewhere in the middle?
 
-Add `my-style.css` to the YAML to override the current css file 
+Add `my-style.css` to the YAML with the current css file 
     
 ```{r eval = FALSE}
 output:
