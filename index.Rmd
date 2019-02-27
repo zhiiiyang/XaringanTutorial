@@ -2,7 +2,7 @@
 title: "How to Make Slides in R"
 subtitle: "Using xaringan"
 author: "Zhi Yang"
-date: "2019/1/9"
+date: "2019/2/26"
 output:
   xaringan::moon_reader:
     css: ["default", "rladies","lucy-fonts", "my-style.css"]
@@ -21,7 +21,7 @@ library(babynames)
 library(tidyverse)
 ```
 
-# How I met Xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
+# How I met xaringan <img src="imgs/icon.png" alt="Sharingan" width="10%" align="center"/>
 .center[An `R` user who would like to share awesome things in `R`]
 --
 .pull-left[
@@ -277,19 +277,19 @@ This is a center- and middle- aligned slide.
 ###Horizontal
 ```
 .left[texts]
-.center[texts] 
-*.right[texts]
+*.center[texts] 
+.right[texts]
 ```
 ]
 
 .right-column[
 ```r
 ---
-class: left, top 
+class: center, middle  
 
 # Demo slide
 
-*.center[This is a center- and middle- aligned slide.]
+*right[This is a center- and middle- aligned slide.]
 ```
 ]
 
@@ -490,7 +490,7 @@ plot(cars, pch = 19, col = "darkgray", las = 1)
 use `fig.height` and `fig.width` to control the size
 
 ---
-#Add a image
+#Add an image
 ```r
 ![](/imgs/ocrug.jpeg)
 ```
@@ -578,8 +578,6 @@ background-size: 30%, 10%
 
 
 ```markdown
-layout: true #<<
-
 background-image: url(imgs/ocrug_logo.png), url(imgs/ocrug_logo.png)
 background-position: 0% 100%, 100% 0%
 background-size: 30%, 10%
@@ -592,13 +590,13 @@ background-size: 30%, 10%
 ---
 # Netlify `r emo::ji("computer")`
 .pull-left[
-`Step 1:` Go to netlify.com
+`Step 1:` go to netlify.com
 
 <img src="imgs/netlify.jpg" align="middle" />
 ]
 
 .pull-right[
-`Step 2:` Connect with your Github account
+`Step 2:` connect with your Github account
 
 <img src="imgs/step2.jpg" align="middle" />
 
@@ -609,14 +607,14 @@ background-size: 30%, 10%
 # Netlify `r emo::ji("computer")`
 .pull-left[
 
-`Step 3:` Select a repo
+`Step 3:` select a repo
 
 <img src="imgs/step3.jpg" align="middle" />
 ]
 --
 .pull-right[
 
-`Step 4:` Select a repo
+`Step 4:` select a branch
 
 <img src="imgs/step4.jpg" align="middle" />
 ]
@@ -624,18 +622,26 @@ background-size: 30%, 10%
 ---
 # Netlify `r emo::ji("computer")`
 .pull-top[
-`Step 5:` Deploy a site
+`Step 5:` deploy a site
 
 <img src="imgs/deploy.jpg" width='60%' align="middle" />
 
 ]
 
 .pull-bottom[
-`Step 6:` Change site name
+`Step 6:` change site name
 
 <img src="imgs/step5.jpg" width='50%' align="middle" />
 
 ]
+
+---
+class: middle 
+
+# More info...
+
+.pull-left[![](/imgs/gh1.png)]
+.pull-right[![](/imgs/gh2.png)]
 
 
 ---
