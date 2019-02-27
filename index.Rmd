@@ -289,7 +289,7 @@ class: center, middle
 
 # Demo slide
 
-*right[This is a center- and middle- aligned slide.]
+*.right[This is a center- and middle- aligned slide.]
 ```
 ]
 
