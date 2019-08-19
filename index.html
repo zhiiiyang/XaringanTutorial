@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
     <title>How to Make Slides in R</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="author" content="Zhi Yang" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/rladies.css" rel="stylesheet" />
@@ -84,7 +84,7 @@ Do you use `ctrl + K` to render your slides?
 ####From now on, the slides will auto-reload every time you `save` it
 
 ---
-# Infinite moon reader 👨‍🚀
+# Infinite moon reader 👩‍🚀
 
 .center[![](https://user-images.githubusercontent.com/163582/53144527-35f7a500-3562-11e9-862e-892d3fd7036d.gif)]
 
@@ -123,15 +123,15 @@ names(xaringan:::list_css())
 
 ```
 ##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"   
-##  [4] "default"          "duke-blue"        "hygge-duke"      
-##  [7] "hygge"            "kunoichi"         "lucy-fonts"      
-## [10] "lucy"             "metropolis-fonts" "metropolis"      
-## [13] "middlebury-fonts" "middlebury"       "ninjutsu"        
-## [16] "rladies-fonts"    "rladies"          "robot-fonts"     
-## [19] "robot"            "rutgers-fonts"    "rutgers"         
-## [22] "shinobi"          "tamu-fonts"       "tamu"            
-## [25] "uo-fonts"         "uo"               "uol-fonts"       
-## [28] "uol"
+##  [4] "default"          "duke-blue"        "fc-fonts"        
+##  [7] "fc"               "hygge-duke"       "hygge"           
+## [10] "kunoichi"         "lucy-fonts"       "lucy"            
+## [13] "metropolis-fonts" "metropolis"       "middlebury-fonts"
+## [16] "middlebury"       "ninjutsu"         "rladies-fonts"   
+## [19] "rladies"          "robot-fonts"      "robot"           
+## [22] "rutgers-fonts"    "rutgers"          "shinobi"         
+## [25] "tamu-fonts"       "tamu"             "uo-fonts"        
+## [28] "uo"               "uol-fonts"        "uol"
 ```
 
 --
@@ -415,7 +415,7 @@ Output:
 ## 2  1882 M     Orange     8 0.0000656
 ## 3  1883 M     Orange    11 0.0000978
 ## 4  1884 M     Orange    13 0.000106 
-## 5  1885 M     Orange     8 0.0000690
+## 5  1885 M     Orange     8 0.000069 
 ## 6  1886 M     Orange     7 0.0000588
 ```
 ]
@@ -466,7 +466,7 @@ head(namedata)
 ## 2  1882 M     Orange     8 0.0000656
 ## 3  1883 M     Orange    11 0.0000978
 ## 4  1884 M     Orange    13 0.000106 
-## 5  1885 M     Orange     8 0.0000690
+## 5  1885 M     Orange     8 0.000069 
 ## 6  1886 M     Orange     7 0.0000588
 ```
 ]
@@ -503,12 +503,12 @@ head(gss_cat)
 ## # A tibble: 6 x 9
 ##    year marital     age race  rincome   partyid    relig    denom   tvhours
 ##   &lt;int&gt; &lt;fct&gt;     &lt;int&gt; &lt;fct&gt; &lt;fct&gt;     &lt;fct&gt;      &lt;fct&gt;    &lt;fct&gt;     &lt;int&gt;
-## 1  2000 Never ma…    26 White $8000 to… Ind,near … Protest… Southe…      12
-## 2  2000 Divorced     48 White $8000 to… Not str r… Protest… Baptis…      NA
-## 3  2000 Widowed      67 White Not appl… Independe… Protest… No den…       2
-## 4  2000 Never ma…    39 White Not appl… Ind,near … Orthodo… Not ap…       4
-## 5  2000 Divorced     25 White Not appl… Not str d… None     Not ap…       1
-## 6  2000 Married      25 White $20000 -… Strong de… Protest… Southe…      NA
+## 1  2000 Never ma~    26 White $8000 to~ Ind,near ~ Protest~ Southe~      12
+## 2  2000 Divorced     48 White $8000 to~ Not str r~ Protest~ Baptis~      NA
+## 3  2000 Widowed      67 White Not appl~ Independe~ Protest~ No den~       2
+## 4  2000 Never ma~    39 White Not appl~ Ind,near ~ Orthodo~ Not ap~       4
+## 5  2000 Divorced     25 White Not appl~ Not str d~ None     Not ap~       1
+## 6  2000 Married      25 White $20000 -~ Strong de~ Protest~ Southe~      NA
 ```
 ]
 
@@ -748,6 +748,7 @@ Slides created via the R package [**xaringan**](https://github.com/yihui/xaringa
 
 Template created by [Alison Hill](https://alison.rbind.io/)
     </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
@@ -757,16 +758,57 @@ Template created by [Alison Hill](https://alison.rbind.io/)
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
-(function() {
-  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
   if (!r) return;
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
 })();</script>
 
 <script>
 (function() {
-  var i, text, code, codes = document.getElementsByTagName('code');
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
   for (i = 0; i < codes.length;) {
     code = codes[i];
     if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
@@ -780,7 +822,8 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     i++;
   }
-})();
+};
+slideshow._releaseMath(document);
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
